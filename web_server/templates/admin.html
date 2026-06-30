@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <style>
+        body { font-family: Arial; background: #1a1a1a; color: #00ff00; margin: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .panel { background: #222; padding: 20px; border: 2px solid #00ff00; }
+        a { color: #00ff00; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Panel</h1>
+        <div class="panel">
+            <h2>Welcome, {{ username }}</h2>
+            <h3>System Information</h3>
+            <ul>
+                <li>Encryption: AES-256-CBC</li>
+                <li>Status: ACTIVE</li>
+                <li>Key Start: 3b6ba8f92d8c4e7a</li>
+            </ul>
+            <hr/>
+            <h3>Available Endpoints:</h3>
+            <ul>
+                <li><code>/api/status</code> - System status</li>
+                <li><code>/api/config</code> - Encrypted config</li>
+                <li><code>/api/verify</code> - Flag verification</li>
+            </ul>
+            <hr/>
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+</body>
+</html>
